@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="formaBg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#091124"/>
+      <stop offset="100%" stop-color="#040814"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#formaBg)"/>
+
+  <!-- Editorial Layout Frame -->
+  <rect x="180" y="140" width="1240" height="720" rx="32" fill="#0d1836" stroke="#253556" stroke-width="1.5"/>
+
+  <!-- Left Column: Sculptural Silhouette in deep navy tones -->
+  <g transform="translate(320, 500)">
+    <path d="M 0 -220 C 140 -220 220 -120 220 0 C 220 140 120 220 0 220 C -120 220 -220 140 -220 0 C -220 -120 -140 -220 0 -220 Z" fill="#142247" stroke="#3b82f6" stroke-width="2"/>
+    <ellipse cx="0" cy="0" rx="140" ry="170" fill="#1a2d5c" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="3 5"/>
+    <circle cx="0" cy="0" r="70" fill="#243b75"/>
+    <circle cx="0" cy="0" r="16" fill="#bfdbfe"/>
+  </g>
+
+  <!-- Right Column: Editorial Typography Presentation -->
+  <g transform="translate(760, 320)">
+    <text x="0" y="40" fill="#93c5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" letter-spacing="3" text-transform="uppercase">ATELIER CATALOGUE 08</text>
+    <text x="0" y="120" fill="#f8fafc" font-family="'Playfair Display', serif" font-size="64" font-weight="600" letter-spacing="-1">Forma Studio</text>
+    <text x="0" y="180" fill="#94a3b8" font-family="'Playfair Display', serif" font-style="italic" font-size="24">Ceramic Objects and Architectural Light</text>
+    
+    <line x1="0" y1="230" x2="480" y2="230" stroke="#253556" stroke-width="1.5"/>
+
+    <text x="0" y="280" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" line-height="1.6">
+      A digital editorial experience designed with generous margins,
+    </text>
+    <text x="0" y="310" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="16">
+      curated material palettes, and bespoke e-commerce architecture.
+    </text>
+
+    <!-- Specs row -->
+    <g transform="translate(0, 380)">
+      <text x="0" y="0" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" letter-spacing="1">CURATION</text>
+      <text x="0" y="25" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="500">Stockholm, Sweden</text>
+      
+      <text x="240" y="0" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" letter-spacing="1">MEDIUM</text>
+      <text x="240" y="25" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="500">Stoneware, Handcast Bronze</text>
+    </g>
+  </g>
+</svg>

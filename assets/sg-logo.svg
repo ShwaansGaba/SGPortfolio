@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="sgNavyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <!-- Monogram for Shwaans Gaba: architectural, poised curves -->
+  <path d="M 40 24 C 26 24 20 30 20 38 C 20 48 38 48 38 58 C 38 66 30 72 20 72" stroke="url(#sgNavyGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 80 34 C 76 27 68 24 58 24 C 44 24 44 38 44 50 C 44 62 48 72 62 72 C 76 72 80 64 80 54 L 62 54" stroke="url(#sgNavyGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

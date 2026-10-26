@@ -1,0 +1,8 @@
+# Redundant archives & non-project files
+*.zip
+*.pdf
+ezgif-73e2c4c3628be5f2-jpg/
+frames/
+node_modules/
+.DS_Store
+Thumbs.db

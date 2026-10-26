@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shwaans Gaba, Creative Developer and Design Technologist. Architectural digital systems, spatial acoustics, and motion engineering.">
+  <meta name="theme-color" content="#050a17">
+  <title>Shwaans Gaba, Creative Developer &amp; Designer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/sg-logo.svg">
+
+  <!-- Immediate Preload for Hero Frame 1 (HD) -->
+  <link rel="preload" as="image" href="gemini_generated_video_cd0d7216_gwr_video_mvp_frames/gemini_generated_video_cd0d7216_gwr_video_mvp_frames/frame_001.png">
+
+  <!-- Intentional Typographic Pairing: Playfair Display & Plus Jakarta Sans (No Default Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=blueAccentV4">
+</head>
+<body>
+
+  <!-- Minimal Hairline Loading Strip -->
+  <div id="loader-strip" class="loader-strip"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notice" class="toast-notice" role="status" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       CURVY FLOATING NAVBAR (NAVY BLUE TRANSLUCENT)
+       Pops down smoothly with blur fade as camera enters the laptop display.
+       ======================================================================== -->
+  <header class="navbar-container nav-hidden" id="main-nav">
+    <nav class="navbar-pill" aria-label="Primary Navigation">
+      <a href="#intro" class="nav-brand" aria-label="Shwaans Gaba Home">
+        <div class="nav-logo-mark">
+          <svg viewBox="0 0 100 100" fill="none">
+            <path d="M 40 24 C 26 24 20 30 20 38 C 20 48 38 48 38 58 C 38 66 30 72 20 72" stroke="#93c5fd" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 80 34 C 76 27 68 24 58 24 C 44 24 44 38 44 50 C 44 62 48 72 62 72 C 76 72 80 64 80 54 L 62 54" stroke="#3b82f6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span>Shwaans Gaba</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#toolkit" class="nav-link">Toolkit</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta">
+        Get in touch
+      </a>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       HERO CINEMATIC SCROLL STAGE
+       Laptop starts closed in the lower viewport against pure black canvas.
+       Scrolls down: lid opens: SG logo unfolds: camera pushes into screen.
+       As camera pushes in, Flagship Hero Screen Content pops on with blur fade.
+       ======================================================================== -->
+  <div class="hero-scroll-track" id="hero-track">
+    <div class="hero-sticky-stage">
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+
+      <!-- REAL-TIME FRAME COUNTER HUD (Hidden) -->
+      <div class="frame-counter-pill" id="frame-counter" style="display: none;" aria-hidden="true">FRAME 001 / 240</div>
+
+      <!-- FLAGSHIP HERO SCREEN CONTENT (EMERGES INSIDE LAPTOP DISPLAY & GROWS ON ZOOM) -->
+      <div class="hero-screen-content" id="hero-screen-content">
+        <div class="hero-screen-layout">
+          
+          <!-- Visual Column: Studio Workspace & Glass Badge (Inspiration: Image 1) -->
+          <div class="hero-screen-visual-col">
+            <div class="hero-organic-image-mask">
+              <img src="assets/studio-workspace.jpg" alt="Shwaans Gaba Creative Studio Workspace" class="hero-workspace-img" />
+              <div class="hero-floating-craft-badge">
+                <span class="craft-badge-number">100%</span>
+                <span class="craft-badge-label">Custom Craft</span>
+                <div class="craft-badge-pills">
+                  <span class="craft-micro-pill">WebGL / 3D</span>
+                  <span class="craft-micro-pill">Full-Stack</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative Column: Intent & Philosophy -->
+          <div class="hero-screen-text-col">
+            <span class="hero-kicker">My Philosophy</span>
+            <h1 class="hero-title">
+              Design with <span class="hero-italic-word">intent.</span>
+            </h1>
+            <p class="hero-description">
+              I believe a digital presence should be an atmosphere, not just a tool. Every pixel is placed to serve a purpose: to convert, to automate, and to inspire.
+            </p>
+
+            <!-- Feature Checklist (Inspiration: Image 2) -->
+            <div class="hero-checklist">
+              <div class="hero-check-item">
+                <span class="hero-check-icon">&#10003;</span>
+                <span>Bespoke Creative Engineering</span>
+              </div>
+              <div class="hero-check-item">
+                <span class="hero-check-icon">&#10003;</span>
+                <span>Automated Systems</span>
+              </div>
+              <div class="hero-check-item">
+                <span class="hero-check-icon">&#10003;</span>
+                <span>60 FPS Cinematic Motion</span>
+              </div>
+              <div class="hero-check-item">
+                <span class="hero-check-icon">&#10003;</span>
+                <span>Spatial 3D Architecture</span>
+              </div>
+            </div>
+
+            <!-- Stylish Curvy Buttons (Inspiration: Image 1 & 2) -->
+            <div class="hero-button-row">
+              <a href="#toolkit" class="hero-btn-primary">
+                Explore Selected Work
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contact" class="hero-btn-secondary">
+                Initiate Project
+              </a>
+            </div>
+
+            <!-- Stats Row (Inspiration: Image 1) -->
+            <div class="hero-stats-row">
+              <div class="hero-stat-block">
+                <span class="hero-stat-number">100%</span>
+                <span class="hero-stat-label">Custom Craft</span>
+              </div>
+              <div class="hero-stat-block">
+                <span class="hero-stat-number">14 Days</span>
+                <span class="hero-stat-label">Sprint Delivery</span>
+              </div>
+              <div class="hero-stat-block">
+                <span class="hero-stat-number">24/7</span>
+                <span class="hero-stat-label">Global Presence</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MAIN PORTFOLIO CONTENT (NAVY BLUE TRANSLUCENT CURVY THEME)
+       Emerges seamlessly with optical blur as the visitor enters the screen.
+       ======================================================================== -->
+  <main class="main-content">
+
+    <!-- Still Luminous Blue Accent at Section Horizon (Fading & Blurring Upward & Downward) -->
+    <div class="seam-blue-accent" aria-hidden="true">
+      <div class="seam-blue-accent-glow"></div>
+      <div class="seam-blue-accent-core"></div>
+    </div>
+
+    <!-- Seamless Gradient Fade from Pitch-Black Hero into Luminous Navy Canvas -->
+    <div class="hero-to-content-fade" aria-hidden="true"></div>
+
+    <!-- AMBIENT FLOATING LUMINOUS BLUE ORBS (CONTINUOUS SCROLL PARALLAX) -->
+    <div class="ambient-orbs-container" aria-hidden="true">
+      <div class="ambient-orb orb-1" id="ambient-orb-1"></div>
+      <div class="ambient-orb orb-2" id="ambient-orb-2"></div>
+      <div class="ambient-orb orb-3" id="ambient-orb-3"></div>
+      <div class="ambient-orb orb-4" id="ambient-orb-4"></div>
+      <div class="ambient-orb orb-5" id="ambient-orb-5"></div>
+    </div>
+
+    <!-- INTRO SECTION (EDITORIAL POISE) -->
+    <section class="section-intro" id="intro">
+      <div class="intro-container scroll-blur-reveal">
+        
+        <!-- Grounded Editorial Kicker (No Pill Badges) -->
+        <div class="intro-kicker-bar">
+          <span>Creative Engineering &amp; Architecture</span>
+          <span>New Delhi, India : Remote Commissions</span>
+        </div>
+
+        <div class="intro-headline-wrapper">
+          <h1 class="intro-name">Shwaans Gaba</h1>
+          <p class="intro-role">Creative Developer &amp; Design Technologist</p>
+
+          <p class="intro-statement">
+            I craft digital experiences combining <em>architectural design</em>, <em>spatial technology</em>, and <em>cinematic motion</em>.
+          </p>
+        </div>
+
+        <div class="intro-actions">
+          <a href="#work" class="btn-primary">
+            Explore Selected Work
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+          </a>
+          <a href="#contact" class="btn-secondary">
+            Get in Touch
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TOOLKIT SECTION (INSPIRATION: IMAGE 3) -->
+    <section class="section-wrapper" id="toolkit">
+      <div class="section-header scroll-blur-reveal">
+        <span class="section-kicker">My Toolkit</span>
+        <h2 class="section-title">
+          Everything you need to <span class="hero-italic-word">dominate.</span>
+        </h2>
+        <p class="section-subtitle">
+          High-performance digital flagships, bespoke software architectures, and automated systems engineered for enduring brand impact.
+        </p>
+      </div>
+
+      <div class="toolkit-grid scroll-blur-reveal">
+        <div class="toolkit-card">
+          <span class="toolkit-number">01</span>
+          <h3 class="toolkit-title">Professional Websites</h3>
+          <p class="toolkit-desc">
+            High-converting digital flagships that define your brand identity with editorial poise and cinematic motion.
+          </p>
+        </div>
+
+        <div class="toolkit-card">
+          <span class="toolkit-number">02</span>
+          <h3 class="toolkit-title">Management Systems</h3>
+          <p class="toolkit-desc">
+            Full-fledged internal tools, bespoke architectures, and automated pipelines to scale your business operations.
+          </p>
+        </div>
+
+        <div class="toolkit-card">
+          <span class="toolkit-number">03</span>
+          <h3 class="toolkit-title">Custom Software</h3>
+          <p class="toolkit-desc">
+            Bespoke web applications and software solutions tailored with real-time 3D, spatial sound, and custom integrations.
+          </p>
+        </div>
+
+        <div class="toolkit-card">
+          <span class="toolkit-number">04</span>
+          <h3 class="toolkit-title">Smart Automation</h3>
+          <p class="toolkit-desc">
+            Systems that handle inquiries, client bookings, and workflows automatically with zero downtime.
+          </p>
+        </div>
+
+        <div class="toolkit-card">
+          <span class="toolkit-number">05</span>
+          <h3 class="toolkit-title">AI Creative &amp; 3D</h3>
+          <p class="toolkit-desc">
+            Real-time generative visuals, dynamic shaders, and tactile 3D product interactions powered by modern WebGL.
+          </p>
+        </div>
+
+        <div class="toolkit-card">
+          <span class="toolkit-number">06</span>
+          <h3 class="toolkit-title">Growth Engines</h3>
+          <p class="toolkit-desc">
+            Strategic engineering, sub-second latency, and performance architectures that turn your digital presence into your most valuable asset.
+          </p>
+        </div>
+      </div>
+
+      <!-- FEATURED CREATIVE ARCHITECTURE SHOWCASE (INSPIRATION: IMAGE 2) -->
+      <div class="toolkit-featured-spread scroll-blur-reveal">
+        <div class="featured-spread-text">
+          <span class="featured-kicker-pill">Creative Architecture &amp; Automation</span>
+          <h3 class="featured-spread-title">
+            From concept to <span class="hero-italic-word" style="color: #38bdf8;">production.</span>
+          </h3>
+          <p class="featured-spread-desc">
+            I engineer end-to-end digital solutions that convert visitors into clients and automate operations with sub-second performance.
+          </p>
+
+          <div class="featured-checklist-grid">
+            <div class="featured-check-item">
+              <span class="hero-check-icon">&#10003;</span>
+              <span>AI Product Visuals &amp; 3D WebGL</span>
+            </div>
+            <div class="featured-check-item">
+              <span class="hero-check-icon">&#10003;</span>
+              <span>Automated API &amp; eNACH Pipelines</span>
+            </div>
+            <div class="featured-check-item">
+              <span class="hero-check-icon">&#10003;</span>
+              <span>Multi-SKU Payment Integrations</span>
+            </div>
+            <div class="featured-check-item">
+              <span class="hero-check-icon">&#10003;</span>
+              <span>Zero-Downtime High Concurrency</span>
+            </div>
+          </div>
+
+          <div style="padding-top: 10px;">
+            <a href="#work" class="btn-primary">
+              View Selected Work
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="featured-spread-visual">
+          <div class="featured-image-frame">
+            <img src="assets/creative-stack-3d.jpg" alt="3D Creative Architecture &amp; Tools Stack" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- ========================================================================
+       3D SPIRAL HELIX SCROLL GALLERY (THREE.JS + GSAP SCROLLTRIGGER PIN)
+       Pitch-black canvas matching reference image (pure #000000).
+       Cards land flat and centered, pause, and rotate sequentially along 3D helix.
+       ======================================================================== -->
+  <section class="spiral-stage-section" id="spiral-track">
+    <div id="spiral-webgl-container" class="spiral-webgl-mount"></div>
+  </section>
+
+  <!-- ========================================================================
+       ALTERNATING EDITORIAL PROJECT SHOWCASE
+       One project image right, text left; next image left, text right.
+       ======================================================================== -->
+  <section class="section-wrapper" id="work">
+    <div class="section-header scroll-blur-reveal">
+      <span class="section-kicker">Volume 01 : Selected Architecture</span>
+      <h2 class="section-title">Featured Project Builds</h2>
+      <p class="section-subtitle">
+        Bespoke digital flagships, fintech platforms, and interactive prototypes built with precision engineering.
+      </p>
+    </div>
+
+    <div class="projects-alternating-list">
+
+      <!-- PROJECT 01: EKMAN BY EKTA (Text Left, Image Right) -->
+      <article class="project-row-alt scroll-blur-reveal" data-project="ekman">
+        <div class="project-alt-info">
+          <div class="project-meta-kicker-bar">
+            <span class="kicker-index">01 / 03</span>
+            <span class="kicker-divider">:</span>
+            <span class="kicker-category">HERBAL SKINCARE E-COMMERCE</span>
+            <span class="kicker-divider">:</span>
+            <span class="kicker-geo">NEW DELHI</span>
+          </div>
+
+          <h3 class="project-alt-title">Ekman by Ekta</h3>
+
+          <p class="project-lead-statement">
+            An artisanal direct-to-consumer e-commerce architecture engineered for a high-growth herbal skincare startup in Delhi, unifying luxury editorial storefront design, multi-SKU inventory synchronization, and frictionless payment checkout.
+          </p>
+
+          <div class="project-spec-ledger">
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Domain</span>
+              <span class="spec-ledger-val">D2C Luxury Skincare &amp; E-Commerce</span>
+            </div>
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Architecture</span>
+              <span class="spec-ledger-val">Custom Storefront, Real-Time Inventory, Razorpay</span>
+            </div>
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Location</span>
+              <span class="spec-ledger-val">New Delhi, India (Active Commercial Operations)</span>
+            </div>
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Deployment</span>
+              <span class="spec-ledger-val">Production Web Platform (ekmanbyekta.com)</span>
+            </div>
+          </div>
+
+          <div class="project-alt-actions">
+            <a href="https://www.ekmanbyekta.com" target="_blank" rel="noopener noreferrer" class="btn-visit-site">
+              Visit ekmanbyekta.com
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <button class="btn-details-drawer btn-case-study" data-project="ekman" aria-label="View Ekman Architecture Details">
+              Architectural Specifications
+            </button>
+          </div>
+        </div>
+
+        <div class="project-alt-visual">
+          <img src="assets/project-ekman.png" alt="Ekman by Ekta E-Commerce Website" loading="lazy" />
+        </div>
+      </article>
+
+      <!-- PROJECT 02: SOUND FINANCE PVT. LTD. (Image Left, Text Right) -->
+      <article class="project-row-alt reverse scroll-blur-reveal" data-project="soundfinance">
+        <div class="project-alt-info">
+          <div class="project-meta-kicker-bar">
+            <span class="kicker-index">02 / 03</span>
+            <span class="kicker-divider">:</span>
+            <span class="kicker-category">COMMERCIAL VEHICLE NBFC</span>
+            <span class="kicker-divider">:</span>
+            <span class="kicker-geo">DELHI NCR</span>
+          </div>
+
+          <h3 class="project-alt-title">Sound Finance Pvt. Ltd.</h3>
+
+          <p class="project-lead-statement">
+            Institutional digital flagship for an established RBI-registered NBFC firm in Delhi, facilitating commercial vehicle loans up to 90% on-road funding alongside automated online EMI payment schedules and eNACH mandate collection.
+          </p>
+
+          <div class="project-spec-ledger">
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Domain</span>
+              <span class="spec-ledger-val">RBI-Registered Non-Banking Financial Company (NBFC)</span>
+            </div>
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Core Fleet</span>
+              <span class="spec-ledger-val">Tata ACE, Bajaj Maxima, and Electric L5 Fleets</span>
+            </div>
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Fintech Pipeline</span>
+              <span class="spec-ledger-val">Interactive EMI Calculator and eNACH Automated Collection</span>
+            </div>
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Deployment</span>
+              <span class="spec-ledger-val">Live Corporate Platform (GitHub / Custom Domain)</span>
+            </div>
+          </div>
+
+          <div class="project-alt-actions">
+            <a href="https://sankalpdigitech.github.io/SoundFinance/" target="_blank" rel="noopener noreferrer" class="btn-visit-site">
+              Explore Sound Finance
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <button class="btn-details-drawer btn-case-study" data-project="soundfinance" aria-label="View Sound Finance Architecture Details">
+              Architectural Specifications
+            </button>
+          </div>
+        </div>
+
+        <div class="project-alt-visual">
+          <img src="assets/project-soundfinance.png" alt="Sound Finance Website Interface" loading="lazy" />
+        </div>
+      </article>
+
+      <!-- PROJECT 03: GRYND (Text Left, Image Right) -->
+      <article class="project-row-alt scroll-blur-reveal" data-project="grynd">
+        <div class="project-alt-info">
+          <div class="project-meta-kicker-bar">
+            <span class="kicker-index">03 / 03</span>
+            <span class="kicker-divider">:</span>
+            <span class="kicker-category">FREELANCE MARKETPLACE PROTOTYPE</span>
+            <span class="kicker-divider">:</span>
+            <span class="kicker-geo">CAMPUS TALENT</span>
+          </div>
+
+          <h3 class="project-alt-title">Grynd</h3>
+
+          <p class="project-lead-statement">
+            A peer-to-peer online freelance marketplace prototype built to empower student creators and teen freelancers to showcase verified skills, onboard clients, and discover paid commissions across video editing, graphic design, and creative services.
+          </p>
+
+          <div class="project-spec-ledger">
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Concept</span>
+              <span class="spec-ledger-val">Student and Teen Creative Gig Marketplace</span>
+            </div>
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Focus Verticals</span>
+              <span class="spec-ledger-val">Short-Form Video Editing, Event Posters, Tutoring</span>
+            </div>
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Architecture</span>
+              <span class="spec-ledger-val">Dual Freelancer/Client Portals, Verified Portfolios</span>
+            </div>
+            <div class="spec-ledger-item">
+              <span class="spec-ledger-key">Deployment</span>
+              <span class="spec-ledger-val">Live Web Prototype (GitHub / Prototype Sandbox)</span>
+            </div>
+          </div>
+
+          <div class="project-alt-actions">
+            <a href="https://sankalpdigitech.github.io/Grynd/" target="_blank" rel="noopener noreferrer" class="btn-visit-site">
+              Launch Grynd Prototype
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <button class="btn-details-drawer btn-case-study" data-project="grynd" aria-label="View Grynd Architecture Details">
+              Architectural Specifications
+            </button>
+          </div>
+        </div>
+
+        <div class="project-alt-visual">
+          <img src="assets/project-grynd.png" alt="Grynd Marketplace Prototype" loading="lazy" />
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+    <!-- ABOUT SECTION: ARCHITECTURAL COLUMNS (NO BENTO GRIDS) -->
+    <section class="section-wrapper" id="about">
+      <div class="section-header scroll-blur-reveal">
+        <span class="section-kicker">Volume 02 : Philosophy &amp; Practice</span>
+        <h2 class="section-title">The Discipline of Restraint</h2>
+      </div>
+
+      <div class="about-columns-container scroll-blur-reveal">
+        <div class="about-text-narrative">
+          <p class="about-lead-statement">
+            Software engineering is a material practice. Code gives form, weight, and cadence to ideas.
+          </p>
+
+          <div class="about-body-copy">
+            <p>
+              I am Shwaans Gaba, an independent creative developer and design technologist working at the confluence of spatial architecture, audio synthesis, and high-performance digital interfaces.
+            </p>
+            <p>
+              My practice rejects generic digital templates in favor of bespoke craftsmanship. I approach every platform with typographic rigor, quiet pacing, and structural discipline.
+            </p>
+            <p>
+              Rather than overwhelming the viewer with gratuitous visual noise, my work relies on generous whitespace, considered proportions, and subtle motion transitions that support content rather than compete with it.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-structured-side">
+          <div>
+            <h3 class="column-section-title">Core Disciplines</h3>
+            <div class="structured-ledger-list">
+              <div class="structured-row">
+                <span class="row-main-title">Creative Engineering</span>
+                <span class="row-secondary-note">WebGL, GLSL Shaders, Three.js, TypeScript</span>
+              </div>
+              <div class="structured-row">
+                <span class="row-main-title">Sound Synthesis &amp; DSP</span>
+                <span class="row-secondary-note">Web Audio API, Binaural Filters, Spatial Modeling</span>
+              </div>
+              <div class="structured-row">
+                <span class="row-main-title">Frontend Architecture</span>
+                <span class="row-secondary-note">Next.js, React, Node.js, Performance Optimization</span>
+              </div>
+              <div class="structured-row">
+                <span class="row-main-title">Typographic Art Direction</span>
+                <span class="row-secondary-note">Editorial Systems, Grid Structures, Variable Type</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="column-section-title">Selected Recognition</h3>
+            <div class="structured-ledger-list">
+              <div class="structured-row">
+                <span class="row-main-title">Awwwards Site of the Day</span>
+                <span class="row-secondary-note">2026, Spatial Computing Architecture</span>
+              </div>
+              <div class="structured-row">
+                <span class="row-main-title">FWA of the Day</span>
+                <span class="row-secondary-note">2025, Forma Studio Editorial Flagship</span>
+              </div>
+              <div class="structured-row">
+                <span class="row-main-title">Open Source Recognition</span>
+                <span class="row-secondary-note">2024, High-Performance Canvas Utilities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STUDIO ARCHITECTURAL VISUAL SPREAD -->
+      <div class="about-studio-spread scroll-blur-reveal">
+        <div class="about-studio-frame">
+          <img src="assets/studio-workspace.jpg" alt="Shwaans Gaba Creative Studio Lab" loading="lazy" />
+          <div class="about-studio-caption">
+            <span class="studio-caption-title">Creative Engineering Lab</span>
+            <span class="studio-caption-geo">New Delhi, India : Remote Commissions Worldwide</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION: CURVY NAVY TRANSLUCENT -->
+    <section class="section-wrapper" id="contact">
+      <div class="section-header scroll-blur-reveal">
+        <span class="section-kicker">Volume 03 : Dialogue</span>
+        <h2 class="section-title">Initiate Transmission</h2>
+      </div>
+
+      <div class="contact-columns scroll-blur-reveal">
+        <div class="contact-statement-side">
+          <h3 class="contact-headline">
+            Let's build something of enduring value.
+          </h3>
+          <p class="contact-note">
+            Available for select digital commissions, editorial platforms, and creative technology advisory globally.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <!-- 1-Click Copy Capsule -->
+            <div class="email-copy-capsule" id="email-copy-capsule" data-email="shwaansgaba@gmail.com" title="Click to copy email address">
+              <span class="email-address">shwaansgaba@gmail.com</span>
+              <span class="email-copy-action">Copy</span>
+            </div>
+
+            <div class="social-pills-row">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link-pill">GitHub</a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link-pill">X (Twitter)</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link-pill">LinkedIn</a>
+              <a href="https://read.cv" target="_blank" rel="noopener noreferrer" class="social-link-pill">Read.cv</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-curvy-card">
+          <form id="contact-form">
+            <div class="form-field-group">
+              <label for="contact-name" class="field-label">Name or Atelier</label>
+              <input type="text" id="contact-name" class="field-input" placeholder="Your name or organization" required />
+            </div>
+
+            <div class="form-field-group">
+              <label for="contact-email" class="field-label">Electronic Mail</label>
+              <input type="email" id="contact-email" class="field-input" placeholder="name@domain.com" required />
+            </div>
+
+            <div class="form-field-group">
+              <label for="contact-message" class="field-label">Project Scope &amp; Objectives</label>
+              <textarea id="contact-message" class="field-textarea" placeholder="Outline your timeline, scope, and objectives..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-form-submit">Send Transmission</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <svg viewBox="0 0 100 100" fill="none">
+          <path d="M 40 24 C 26 24 20 30 20 38 C 20 48 38 48 38 58 C 38 66 30 72 20 72" stroke="#93c5fd" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 80 34 C 76 27 68 24 58 24 C 44 24 44 38 44 50 C 44 62 48 72 62 72 C 76 72 80 64 80 54 L 62 54" stroke="#3b82f6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>&copy; 2026 Shwaans Gaba. Crafted with architectural restraint and editorial intent.</span>
+      </div>
+
+      <a href="#intro" class="footer-back-to-top">
+        Return to Top &uarr;
+      </a>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       CASE STUDY DETAIL MODAL (CURVY NAVY TRANSLUCENT)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="case-study-modal" role="dialog" aria-modal="true">
+    <div class="modal-drawer">
+      <div class="modal-header">
+        <div></div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Case Study">&times;</button>
+      </div>
+      <div id="modal-content-area"></div>
+    </div>
+  </div>
+
+  <!-- WebGL & Motion Scripts -->
+  <script src="js/three.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/spiral-webgl.js?v=blueAccentV4"></script>
+  <script src="js/canvas-animation.js?v=blueAccentV4"></script>
+  <script src="js/main.js?v=blueAccentV4"></script>
+</body>
+</html>

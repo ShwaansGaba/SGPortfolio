@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="heliosBg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060c1c"/>
+      <stop offset="100%" stop-color="#02050d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#heliosBg)"/>
+
+  <!-- Celestial Coordinate Grid -->
+  <g stroke="#1b2a4a" stroke-width="1.2">
+    <ellipse cx="800" cy="500" rx="550" ry="320" fill="none"/>
+    <ellipse cx="800" cy="500" rx="420" ry="240" fill="none"/>
+    <ellipse cx="800" cy="500" rx="280" ry="160" fill="none"/>
+    <ellipse cx="800" cy="500" rx="140" ry="80" fill="none"/>
+    
+    <line x1="250" y1="500" x2="1350" y2="500"/>
+    <line x1="800" y1="180" x2="800" y2="820"/>
+  </g>
+
+  <!-- Constellation Nodes & Connecting Vector Arcs -->
+  <g stroke="#60a5fa" stroke-width="1.5" opacity="0.8">
+    <line x1="480" y1="360" x2="620" y2="280"/>
+    <line x1="620" y1="280" x2="780" y2="340"/>
+    <line x1="780" y1="340" x2="940" y2="260"/>
+    <line x1="940" y1="260" x2="1100" y2="380"/>
+    <line x1="780" y1="340" x2="820" y2="540"/>
+    <line x1="820" y1="540" x2="960" y2="620"/>
+  </g>
+
+  <!-- Bright Celestial Stars -->
+  <g fill="#f8fafc">
+    <circle cx="480" cy="360" r="5"/>
+    <circle cx="620" cy="280" r="4"/>
+    <circle cx="780" cy="340" r="7"/>
+    <circle cx="940" cy="260" r="5"/>
+    <circle cx="1100" cy="380" r="6"/>
+    <circle cx="820" cy="540" r="5"/>
+    <circle cx="960" cy="620" r="4"/>
+  </g>
+
+  <!-- Editorial Ledger Box at bottom -->
+  <rect x="240" y="740" width="1120" height="90" rx="24" fill="#0c1836" stroke="#253556" stroke-width="1.5"/>
+  <text x="280" y="792" fill="#93c5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" letter-spacing="2">HELIOS OBSERVATIONAL ARCHIVE</text>
+  <text x="640" y="792" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="13">CATALOG: 14,800 CELESTIAL BODIES</text>
+  <text x="1060" y="792" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13">EQUINOX J2000.0</text>
+</svg>

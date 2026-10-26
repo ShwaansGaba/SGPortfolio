@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="vektorBg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070e1e"/>
+      <stop offset="100%" stop-color="#03060d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#vektorBg)"/>
+
+  <!-- Centered Acoustic Polar Response Diagram -->
+  <g transform="translate(800, 500)">
+    <!-- Range Rings -->
+    <circle cx="0" cy="0" r="120" stroke="#1c2d52" stroke-width="1.5" fill="none"/>
+    <circle cx="0" cy="0" r="220" stroke="#233a69" stroke-width="1.5" fill="none"/>
+    <circle cx="0" cy="0" r="320" stroke="#2d4982" stroke-width="1.5" fill="none"/>
+    <circle cx="0" cy="0" r="420" stroke="#375a9e" stroke-width="1" stroke-dasharray="4 6" fill="none"/>
+
+    <!-- Axis Crosshairs -->
+    <line x1="-440" y1="0" x2="440" y2="0" stroke="#1c2d52" stroke-width="1"/>
+    <line x1="0" y1="-440" x2="0" y2="440" stroke="#1c2d52" stroke-width="1"/>
+
+    <!-- Polar Cardioid Sound Lobes in Navy & Ice Blue -->
+    <path d="M 0 0 C 180 -180 320 -80 320 0 C 320 80 180 180 0 0 Z" fill="#0d1b38" stroke="#3b82f6" stroke-width="2.5" opacity="0.8"/>
+    <path d="M 0 0 C -180 -180 -320 -80 -320 0 C -320 80 -180 180 0 0 Z" fill="#0d1b38" stroke="#3b82f6" stroke-width="2.5" opacity="0.8"/>
+    <path d="M 0 0 C -120 -280 120 -280 0 0 Z" fill="#14264f" stroke="#60a5fa" stroke-width="2" opacity="0.9"/>
+
+    <!-- Geometric Harmonic Waveform Trace -->
+    <path d="M -380 0 Q -190 -160 0 0 T 190 0 T 380 0" stroke="#93c5fd" stroke-width="2" fill="none"/>
+
+    <!-- Origin point -->
+    <circle cx="0" cy="0" r="6" fill="#f8fafc"/>
+  </g>
+
+  <!-- Editorial Labels -->
+  <text x="240" y="200" fill="#93c5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" letter-spacing="3" text-transform="uppercase">SPATIAL SYNTHESIS ENGINE</text>
+  <text x="240" y="235" fill="#f8fafc" font-family="'Playfair Display', serif" font-size="32" font-weight="600">Vektor Acoustic Field</text>
+  <text x="240" y="270" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="14">Binaural impulse response and HRTF geometric simulation.</text>
+</svg>
