@@ -1942,7 +1942,7 @@ button {
 }
 
 /* ==========================================================================
-   RESPONSIVENESS
+   RESPONSIVENESS (TABLET & MOBILE)
    ========================================================================== */
 @media (max-width: 992px) {
   .hero-screen-layout {
@@ -1987,11 +1987,6 @@ button {
     order: 1;
   }
 
-  .spiral-carousel-helix {
-    width: 320px;
-    height: 200px;
-  }
-
   .project-narrative-grid {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -2003,65 +1998,424 @@ button {
   }
   
   .section-wrapper {
-    padding: 100px 24px;
+    padding: 90px 24px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-screen-content {
-    padding: 20px 16px;
-  }
+  /* Ambient Orbs: scaled down for mobile GPU performance */
+  .orb-1 { width: 240px; height: 240px; }
+  .orb-2 { width: 200px; height: 200px; }
+  .orb-3 { width: 260px; height: 260px; }
+  .orb-4 { width: 210px; height: 210px; }
+  .orb-5 { width: 220px; height: 220px; }
+  .ambient-orb { opacity: 0.28; filter: blur(36px); -webkit-filter: blur(36px); }
 
-  .hero-checklist {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-stats-row {
-    gap: 20px;
-  }
-
-  .frame-counter-pill {
-    top: 16px;
-    right: 16px;
-    font-size: 0.74rem;
-    padding: 6px 14px;
-  }
-
-  .toolkit-grid {
-    grid-template-columns: 1fr;
-  }
-
+  /* Navbar */
   .navbar-container {
-    top: 16px;
+    top: 14px;
     padding: 0 16px;
   }
   
   .navbar-pill {
     width: 100%;
-    gap: 16px;
     padding: 8px 16px;
+    justify-content: space-between;
   }
   
   .nav-links {
     display: none;
   }
-  
-  .project-editorial-spread {
-    padding: 24px;
+
+  .nav-brand span {
+    font-size: 0.88rem;
+  }
+
+  .nav-logo-mark {
+    width: 26px;
+    height: 26px;
+  }
+
+  .nav-cta {
+    padding: 6px 14px;
+    font-size: 0.78rem;
+  }
+
+  /* Flagship Hero Card inside laptop display */
+  .hero-screen-content {
+    width: 95vw;
+    max-width: 520px;
+    top: 50%;
+  }
+
+  .hero-screen-layout {
+    padding: 22px 18px;
+    border-radius: var(--radius-curvy-lg);
+    gap: 16px;
+    max-height: 85vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .hero-screen-layout::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-screen-text-col {
+    gap: 12px;
+  }
+
+  .hero-kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 2px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.4rem, 5.4vw, 1.95rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .hero-description {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .hero-checklist {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 2px 0 6px;
+  }
+
+  .hero-check-item {
+    font-size: 0.78rem;
+    gap: 8px;
+  }
+
+  .hero-check-icon {
+    width: 15px;
+    height: 15px;
+    font-size: 0.65rem;
+  }
+
+  .hero-button-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-btn-primary, .hero-btn-secondary {
+    padding: 10px 18px;
+    font-size: 0.82rem;
+    flex: 1 1 calc(50% - 6px);
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-stats-row {
+    padding-top: 10px;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .hero-stat-number {
+    font-size: 1.15rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.64rem;
+  }
+
+  /* Intro Section */
+  .section-intro {
+    padding: 110px 20px 80px;
+    min-height: auto;
+  }
+
+  .intro-container {
+    gap: 32px;
+  }
+
+  .intro-kicker-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 18px;
+    font-size: 0.72rem;
+  }
+
+  .intro-name {
+    font-size: clamp(2.6rem, 9.5vw, 4.2rem);
+    line-height: 1.05;
+  }
+
+  .intro-role {
+    font-size: 1.02rem;
+  }
+
+  .intro-statement {
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  .intro-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .intro-actions .btn-primary,
+  .intro-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 20px;
+  }
+
+  /* Editorial Sections */
+  .section-wrapper {
+    padding: 72px 20px;
+  }
+
+  .section-header {
+    margin-bottom: 44px;
+    padding-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: clamp(1.85rem, 7vw, 2.7rem);
+    line-height: 1.15;
+  }
+
+  .section-subtitle {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    margin-top: 10px;
+  }
+
+  /* Toolkit */
+  .toolkit-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .toolkit-featured-spread {
+    padding: 26px 20px;
+    gap: 24px;
     border-radius: var(--radius-curvy-lg);
   }
-  
+
+  .featured-spread-title {
+    font-size: clamp(1.4rem, 5.5vw, 1.95rem);
+  }
+
+  .featured-spread-desc {
+    font-size: 0.88rem;
+  }
+
+  .featured-image-frame {
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-curvy-md);
+  }
+
+  /* Projects */
+  .projects-alternating-list {
+    gap: 64px;
+    margin-top: 40px;
+  }
+
+  .project-row-alt {
+    padding-bottom: 64px;
+    gap: 28px;
+  }
+
+  .project-alt-visual {
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-curvy-lg);
+  }
+
+  .project-alt-title {
+    font-size: clamp(1.6rem, 6.5vw, 2.3rem);
+    line-height: 1.15;
+  }
+
+  .project-alt-desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .project-alt-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .project-btn-primary,
+  .project-btn-details {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 13px 20px;
+    font-size: 0.86rem;
+  }
+
+  /* About */
+  .about-studio-frame {
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-curvy-lg);
+  }
+
+  .about-studio-caption {
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .about-manifesto-lead {
+    font-size: clamp(1.2rem, 4.8vw, 1.6rem);
+    line-height: 1.45;
+  }
+
+  .about-manifesto-body {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Contact */
   .contact-form-curvy-card {
-    padding: 28px;
+    padding: 24px 18px;
     border-radius: var(--radius-curvy-lg);
   }
-  
+
+  /* iOS Safari 16px font-size to prevent automatic viewport zoom on input focus */
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px !important;
+    padding: 12px 14px;
+  }
+
+  .btn-form-submit {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+
+  /* Modal Drawer */
+  .modal-backdrop {
+    padding: 14px;
+  }
+
   .modal-drawer {
-    padding: 28px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 88vh;
+    padding: 24px 18px;
+    border-radius: var(--radius-curvy-lg);
+  }
+
+  .modal-hero-title {
+    font-size: clamp(1.5rem, 6.5vw, 2.2rem);
+    line-height: 1.15;
   }
 
   .spec-ledger-item {
     grid-template-columns: 1fr;
     gap: 4px;
+    padding: 10px 0;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 48px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra-compact Mobile (iPhone SE, 360-400px devices) */
+  .section-intro {
+    padding: 95px 16px 64px;
+  }
+
+  .section-wrapper {
+    padding: 56px 16px;
+  }
+
+  .hero-screen-layout {
+    padding: 18px 14px;
+    gap: 12px;
+  }
+
+  .hero-title {
+    font-size: 1.45rem;
+  }
+
+  .hero-button-row {
+    flex-direction: column;
+  }
+
+  .hero-btn-primary, .hero-btn-secondary {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .hero-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    text-align: center;
+  }
+
+  .hero-stat-number {
+    font-size: 1.05rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
+  .intro-name {
+    font-size: 2.35rem;
+  }
+
+  .intro-role {
+    font-size: 0.92rem;
+  }
+
+  .intro-statement {
+    font-size: 0.98rem;
+  }
+
+  .toolkit-card {
+    padding: 20px 16px;
+  }
+
+  .project-alt-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-drawer {
+    padding: 20px 14px;
   }
 }

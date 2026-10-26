@@ -47,7 +47,20 @@
   let height = container.clientHeight || window.innerHeight;
 
   const camera = new THREE.PerspectiveCamera(44, width / height, 0.1, 100);
-  camera.position.set(0, 0, 10.0);
+
+  function updateCameraForViewport() {
+    const aspect = width / height;
+    camera.aspect = aspect;
+    if (aspect < 1.0) {
+      // Mobile portrait mode: pull camera back so the card fits cleanly within screen width
+      camera.position.z = Math.max(10.0, 10.0 * (1.18 / Math.max(0.42, aspect)));
+    } else {
+      camera.position.z = 10.0;
+    }
+    camera.updateProjectionMatrix();
+  }
+
+  updateCameraForViewport();
 
   const renderer = new THREE.WebGLRenderer({
     antialias: true,
@@ -189,9 +202,13 @@
   // Previous card: In top-left quadrant, angled rightwards, further back in depth (z = -4.0, rotY = +0.44)
   // Upcoming card: In bottom-right quadrant, angled leftwards, in the distance (z = -3.6, rotY = -0.48)
   function getCardTransform(delta) {
+    const isMobile = (width / height) < 1.0;
+    const baseCenterX = isMobile ? 0.0 : 0.5;
+    const spreadX = isMobile ? 0.65 : 1.0;
+
     if (Math.abs(delta) < 0.0001) {
       return {
-        x: 0.5,
+        x: baseCenterX,
         y: -0.1,
         z: 0.0,
         rotX: 0,
@@ -203,12 +220,12 @@
     }
 
     if (delta < 0) {
-      // PREVIOUS CARDS: Move upward-left into depth (matches FAHEY in reference image)
+      // PREVIOUS CARDS: Move upward-left into depth
       const d = -delta;
       const dClamped = Math.min(d, 2.2);
       return {
-        x: 0.5 - dClamped * 5.8,
-        y: -0.1 + dClamped * 3.2,
+        x: baseCenterX - dClamped * 5.8 * spreadX,
+        y: -0.1 + dClamped * (isMobile ? 2.5 : 3.2),
         z: -dClamped * 4.0,
         rotX: -dClamped * 0.12,
         rotY: dClamped * 0.44,
@@ -217,12 +234,12 @@
         opacity: Math.max(0, 1.0 - dClamped * 0.52)
       };
     } else {
-      // UPCOMING CARDS: Rotate in from bottom-right (matches WISOKY / BERGSTROM in reference image)
+      // UPCOMING CARDS: Rotate in from bottom-right
       const d = delta;
       const dClamped = Math.min(d, 2.2);
       return {
-        x: 0.5 + dClamped * 5.4,
-        y: -0.1 - dClamped * 3.1,
+        x: baseCenterX + dClamped * 5.4 * spreadX,
+        y: -0.1 - dClamped * (isMobile ? 2.5 : 3.1),
         z: -dClamped * 3.6,
         rotX: dClamped * 0.14,
         rotY: -dClamped * 0.48,
@@ -317,8 +334,7 @@
   function handleResize() {
     width = container.clientWidth || window.innerWidth;
     height = container.clientHeight || window.innerHeight;
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
+    updateCameraForViewport();
     renderer.setSize(width, height);
     updateSpiralPositions(currentScrollProgress);
   }
